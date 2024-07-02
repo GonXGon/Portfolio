@@ -1,0 +1,20 @@
+/* Footer.css */
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  #root, .main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  footer {
+    margin-top: auto;
+  }
+  
+  .bg-black {
+    background-color: #000;
+  }
+  
