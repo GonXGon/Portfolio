@@ -3,7 +3,7 @@ import './Skills.css';
 import { Card, Collapse } from 'react-bootstrap';
 
 const Skills = () => {
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(true);
 
     return (
         <div className="skills-container">

@@ -6,8 +6,8 @@ import hfcs from "../../assets/hfcs.jpg";
 import valeo from "../../assets/valeo.png";
 
 const Education = () => {
-    const [open, setOpen] = useState(false);
-    const [expopen, setExpopen] = useState(false);
+    const [open, setOpen] = useState(true);
+    const [expopen, setExpopen] = useState(true);
 
     return (
         <div className="education-container">

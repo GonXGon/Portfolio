@@ -1,3 +1,5 @@
+// src/App.js
+import React from 'react';
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
@@ -10,7 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <>
-      <Header />
+      <Header title="My Portfolio" />
       <main className="my-5">
         <section id="about" className="mb-5">
           <About />
@@ -25,7 +27,7 @@ function App() {
           <Education />
         </section>
       </main>
-        <Footer />
+      <Footer />
     </>
   );
 }

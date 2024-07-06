@@ -36,7 +36,7 @@
 }
 
 .skill {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     font-size: 1.5em;
@@ -46,48 +46,56 @@
 }
 
 .skills-icons-container.open .skill:nth-child(1) {
+    display: flex;
     transition-delay: 0.1s;
     opacity: 1;
     transform: translateY(0);
 }
 
 .skills-icons-container.open .skill:nth-child(2) {
+    display: flex;
     transition-delay: 0.2s;
     opacity: 1;
     transform: translateY(0);
 }
 
 .skills-icons-container.open .skill:nth-child(3) {
+    display: flex;
     transition-delay: 0.3s;
     opacity: 1;
     transform: translateY(0);
 }
 
 .skills-icons-container.open .skill:nth-child(4) {
+    display: flex;
     transition-delay: 0.4s;
     opacity: 1;
     transform: translateY(0);
 }
 
 .skills-icons-container.open .skill:nth-child(5) {
+    display: flex;
     transition-delay: 0.5s;
     opacity: 1;
     transform: translateY(0);
 }
 
 .skills-icons-container.open .skill:nth-child(6) {
+    display: flex;
     transition-delay: 0.6s;
     opacity: 1;
     transform: translateY(0);
 }
 
 .skills-icons-container.open .skill:nth-child(7) {
+    display: flex;
     transition-delay: 0.7s;
     opacity: 1;
     transform: translateY(0);
 }
 
 .skills-icons-container.open .skill:nth-child(8) {
+    display: flex;
     transition-delay: 0.8s;
     opacity: 1;
     transform: translateY(0);

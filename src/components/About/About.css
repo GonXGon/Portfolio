@@ -18,7 +18,6 @@ h2 {
     transition: all 0.5s ease-in-out;
     gap: 2rem;
 }
-
 .text-container{
     display: flex;
     flex-direction: column;

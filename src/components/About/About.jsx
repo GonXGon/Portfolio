@@ -4,7 +4,7 @@ import { Card, Collapse} from 'react-bootstrap';
 import img from "../../assets/profilepic.jpg"
 
 const About = () => {
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(true);
   return (
     <div class="aboutme-container">
         <button class="btn-77" onClick={() => setOpen(!open)}>About Me</button>

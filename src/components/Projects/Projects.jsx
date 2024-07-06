@@ -6,7 +6,7 @@ import fyp from "../../assets/FYP.png";
 import jamming from "../../assets/JAMMING.png";
 
 const Projects = () => {
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(true);
     return (
         <div className="projects-container">
             <button className="btn-77" onClick={() => setOpen(!open)}>Projects</button>
