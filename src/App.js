@@ -1,34 +1,35 @@
-// src/App.js
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import About from "./components/About/About";
-import Skills from "./components/Skills/Skills";
-import Projects from "./components/Projects/Projects";
-import Education from "./components/Education/Education";
+import Home from './pages/Home/Home';
+import Projects from './pages/Projects/Projects';
+import Education from './pages/Education/Education';
+import Skills from './pages/Skills/Skills';
+import Contact from './pages/Contact/Contact';
+
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <>
-      <Header title="My Portfolio" />
-      <main className="my-5">
-        <section id="about" className="mb-5">
-          <About />
-        </section>
-        <section id="projects" className="mb-5">
-          <Projects />
-        </section>
-        <section id="skills" className="mb-5">
-          <Skills />
-        </section>
-        <section id="education" className="mb-5">
-          <Education />
-        </section>
-      </main>
-      <Footer />
-    </>
+    <Router>
+      <>
+        <Header title="My Portfolio" />
+        <main className="my-5">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/eduaction" element={<Education />} />
+            <Route path="/experience" element={<Skills />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+        <Footer />
+      </>
+    </Router>
   );
 }
 

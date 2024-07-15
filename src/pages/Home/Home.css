@@ -1,0 +1,35 @@
+.homePage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+.homePage-detail-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: start;
+}
+
+.homePage-detail-container h2 {
+  font-size: 3rem;
+}
+
+.profile-img-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 2rem;
+}
+
+.container {
+  max-width: 800px;
+}
+
+@media (min-width: 768px) {
+  .homePage-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+}

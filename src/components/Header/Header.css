@@ -1,20 +1,28 @@
-header{
+header {
     background-color: black;
     color: white;
     padding: 1rem;
     align-items: center; 
 }
-.nav-header{
+
+.nav-header {
     display: flex;
     gap: 2rem;
 }
-nav{
+
+nav {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     align-items: center; 
     margin-left: auto;
     gap: 2rem;
 }
-a{
-    color: white;
+
+nav a {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+nav a:hover {
+    text-decoration: underline;
 }

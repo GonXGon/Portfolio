@@ -1,12 +1,12 @@
-// src/features/nav/navSlice.js
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   items: [
-    { id: 1, label: 'About', link: '#about' },
-    { id: 2, label: 'Projects', link: '#projects' },
-    { id: 3, label: 'Skills', link: '#skills' },
-    { id: 4, label: 'Education', link: '#education' },
+    { id: 1, label: 'Home', link: '/' },
+    { id: 2, label: 'Projects', link: '/projects' },
+    { id: 3, label: 'Experience', link: '/experience' },
+    { id: 4, label: 'Education', link: '/eduaction' },
+    { id: 5, label: 'Contact', link: '/contact' },
   ],
 };
 

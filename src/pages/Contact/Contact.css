@@ -1,0 +1,40 @@
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center; 
+    padding: 2rem;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.message-icon {
+    font-size: 10rem;
+    color: #000;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.name-container,
+.message-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.submit-button {
+    align-self: stretch;
+    border-radius: 2rem;
+}

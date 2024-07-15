@@ -1,0 +1,69 @@
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.carousel {
+    position: relative;
+    display: flex;
+    gap: 2em;
+}
+
+.arrow-button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.project-detail-containers {
+    display: flex;
+    gap: 2em;
+}
+
+.card-container {
+    display: flex;
+    border: 2px solid transparent;
+    transition: border 0.3s ease-in-out;
+}
+
+.card-container:hover {
+    border: 2px solid black;
+}
+
+.cardbody-container {
+    display: flex;
+    flex-direction: column;
+    height: 15em;
+}
+
+.icon-container {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        gap: 1em;
+    }
+    .proj-details.center {
+        transform: scale(1.1);
+    }
+}

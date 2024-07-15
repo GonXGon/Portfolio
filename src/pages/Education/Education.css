@@ -1,0 +1,38 @@
+.education-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 2rem;
+}
+
+.education-content-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.education-card-container{
+    display: flex;
+    border: 2px solid transparent;
+    transition: border 0.3s ease-in-out;
+}
+.education-card-container:hover{
+    border: 2px solid black;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.education-icon {
+    margin-right: 10px;
+}
