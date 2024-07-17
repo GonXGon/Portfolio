@@ -1,3 +1,5 @@
+/* Footer.css */
+
 footer {
   background-color: #000;
   color: #fff;
@@ -42,4 +44,13 @@ footer {
 .footer-item {
   display: flex;
   justify-content: flex-start;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .footer-row {
+    flex-direction: column;
+    align-items: start;
+    text-align: center;
+  }
 }

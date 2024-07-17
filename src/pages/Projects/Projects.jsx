@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Projects.css';
 import { Button, Card, Col } from 'react-bootstrap';
 import { motion } from 'framer-motion';
@@ -34,6 +34,19 @@ const Projects = () => {
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     const showNext = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % collection.length);
@@ -43,43 +56,59 @@ const Projects = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + collection.length) % collection.length);
     };
 
-    const currentProjects = collection.slice(currentIndex, currentIndex + 3).concat(
-        collection.slice(0, Math.max(0, (currentIndex + 3) - collection.length))
-    );
+    const currentProjects = isMobile
+        ? [collection[currentIndex]]
+        : collection.slice(currentIndex, currentIndex + 3).concat(
+              collection.slice(0, Math.max(0, (currentIndex + 3) - collection.length))
+          );
 
     return (
         <div className="projects-container">
             <div className="projects">
                 <h2>My Projects</h2>
-                <motion.div className="carousel"
+                <motion.div
+                    className="carousel"
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5 }}
+                >
+                    <button onClick={showPrev} className="arrow-button left">
+                        {"<"}
+                    </button>
+                    <motion.div
+                        className="project-detail-containers"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
                     >
-                    <button onClick={showPrev} className="arrow-button left">{"<"}</button>
-                    <motion.div className="project-detail-containers" initial={{ opacity: 0 }} animate={{ opacity: 1 }} >
                         {currentProjects.map((project, index) => (
                             <Col key={index} className="proj-details">
-                                <motion.div whileHover={{ scale: 1.1 }} onHoverStart={e => {}} onHoverEnd={e => {}} className='card-container'>
+                                <motion.div
+                                    whileHover={{ scale: 1.1 }}
+                                    onHoverStart={(e) => {}}
+                                    onHoverEnd={(e) => {}}
+                                    className="card-container"
+                                >
                                     <Card style={{ width: '18rem' }}>
-                                        <div className="icon-container">
-                                            {project.icon}
-                                        </div>
-                                        <div className='cardbody-container'>
+                                        <div className="icon-container">{project.icon}</div>
+                                        <div className="cardbody-container">
                                             <Card.Body>
                                                 <Card.Title>{project.title}</Card.Title>
                                                 <Card.Text>{project.description}</Card.Text>
                                             </Card.Body>
                                         </div>
                                         <div className="button-container">
-                                            <Button href={project.githubLink} variant="dark">Git Hub Link</Button>
+                                            <Button href={project.githubLink} variant="dark">
+                                                Git Hub Link
+                                            </Button>
                                         </div>
                                     </Card>
                                 </motion.div>
                             </Col>
                         ))}
                     </motion.div>
-                    <button onClick={showNext} className="arrow-button right">{">"}</button>
+                    <button onClick={showNext} className="arrow-button right">
+                        {">"}
+                    </button>
                 </motion.div>
             </div>
         </div>

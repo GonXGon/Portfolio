@@ -1,3 +1,5 @@
+/* Home.css */
+
 .homePage-container {
   display: flex;
   flex-direction: column;
@@ -6,11 +8,14 @@
   min-height: 100vh;
   padding: 2rem;
 }
+
 .homePage-detail-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   text-align: start;
+  width: 100%;
+  gap: 2rem;
 }
 
 .homePage-detail-container h2 {
@@ -20,16 +25,50 @@
 .profile-img-container {
   display: flex;
   flex-direction: row;
-  margin-left: 2rem;
+}
+
+.profile-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
 }
 
 .container {
   max-width: 800px;
 }
 
-@media (min-width: 768px) {
-  .homePage-container {
+.homedetails-container {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .homePage-detail-container {
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+  }
+
+  .homePage-detail-container h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .profile-img-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .homedetails-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-img {
+    max-width: 200px;
+  }
+
+  .Card {
+    width: 100%;
   }
 }

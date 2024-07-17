@@ -62,8 +62,21 @@
 @media (max-width: 768px) {
     .carousel {
         gap: 1em;
+        flex-direction: column;
+        align-items: center;
     }
-    .proj-details.center {
-        transform: scale(1.1);
+    .project-detail-containers{
+        flex-direction: column;
+        align-items: center;
+    }
+    .proj-details{
+        width: 100%;
+    }
+    .arrow-button{
+        font-size: 1.5rem;
+    }
+    .card-container{
+        width: 100%;
+        max-width: 20rem;
     }
 }

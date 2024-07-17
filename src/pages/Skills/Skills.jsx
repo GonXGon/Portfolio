@@ -85,7 +85,7 @@ const Skills = () => {
                 {collectionIcon.map((skill, index) => (
                     <Col key={index} xs={6} md={4} lg={3} className="mb-4">
                         <motion.div whileHover={{ scale: 1.1 }} onHoverStart={e => {}} onHoverEnd={e => {}}>
-                            <Card style={{ width: '15rem', textAlign: 'center' }}>
+                            <Card style={{ width: '10rem', textAlign: 'center' }}>
                                 <Card.Body className="d-flex flex-column align-items-center">
                                     <Card.Title>{skill.icon}</Card.Title>
                                     <Card.Title>{skill.title}</Card.Title>
@@ -105,7 +105,7 @@ const Skills = () => {
                 {collectionInternships.map((internship, index) => (
                     <Col key={index} xs={6} md={4} lg={3} className="mb-4">
                         <motion.div whileHover={{ scale: 1.1 }} onHoverStart={e => {}} onHoverEnd={e => {}} >
-                            <Card style={{ width: '15rem', textAlign: 'center' }}>
+                            <Card style={{ width: '10rem', textAlign: 'center' }}>
                                 <Card.Body className="d-flex flex-column align-items-center">
                                     <Card.Title>{internship.icon}</Card.Title>
                                     <Card.Title>{internship.name}</Card.Title>

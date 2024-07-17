@@ -34,3 +34,22 @@
 .internship-icon {
     font-size: 1em;
 }
+
+@media (max-width: 768px) {
+    .skills-content-container{
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    .experience-content-container{
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+}

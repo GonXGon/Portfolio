@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Stack, Nav } from 'react-bootstrap';
+import { Container, Row, Col, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import './Footer.css';
@@ -10,11 +10,9 @@ const Footer = () => {
   return (
     <footer>
       <Container fluid>
-        <Row className="bg-black text-white py-4">
-          <Col className="mx-5">
-            <Stack>
-              <h2>Shubham Banyal</h2>
-            </Stack>
+        <Row className="footer-row bg-black text-white py-4">
+          <Col className="">
+            <h2>Shubham Banyal</h2>
           </Col>
           <Col>
             <Nav className="flex-column">
