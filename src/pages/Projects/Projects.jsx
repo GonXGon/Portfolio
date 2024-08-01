@@ -3,7 +3,7 @@ import './Projects.css';
 import { Button, Card, Col } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLaptopCode, faMusic, faCloud, faMobileAlt } from '@fortawesome/free-solid-svg-icons';
+import { faLaptopCode, faMusic, faCloud, faMobileAlt,faTasks } from '@fortawesome/free-solid-svg-icons';
 
 const Projects = () => {
     const collection = [
@@ -30,6 +30,12 @@ const Projects = () => {
             description: "This mobile app, developed in Android Studio using Java and XML, enables users to record incomes and expenses, displaying the total net income for the logged-in user.",
             icon: <FontAwesomeIcon icon={faMobileAlt} className="project-icon" />,
             githubLink: 'https://github.com/GonXGon/FinalYearProject.git',
+        },
+        {
+            title: "Task Done",
+            description: "This is a React based Web application which allows user to Add, Update, Delete tasks the user have added.",
+            icon: <FontAwesomeIcon icon={faTasks} className="project-icon" />,
+            githubLink: 'https://github.com/GonXGon/React_ToDo.git',
         },
     ];
 
