@@ -31,6 +31,12 @@ const Projects = () => {
             icon: <FontAwesomeIcon icon={faMobileAlt} className="project-icon" />,
             githubLink: 'https://github.com/GonXGon/FinalYearProject.git',
         },
+        {
+            title: "Task Done",
+            description: "This is a React based Web application which allows user to Add, Update, Delete tasks the user have added.",
+            icon: <FontAwesomeIcon icon={faTasks} className="project-icon" />,
+            githubLink: 'https://github.com/GonXGon/React_ToDo.git',
+        },
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
