@@ -3,7 +3,7 @@ import './Projects.css';
 import { Button, Card, Col } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLaptopCode, faMusic, faCloud, faMobileAlt,faTasks } from '@fortawesome/free-solid-svg-icons';
+import { faLaptopCode, faMusic, faCloud, faMobileAlt, faTasks, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 const Projects = () => {
     const collection = [
@@ -12,6 +12,13 @@ const Projects = () => {
             description: "The website, my Final Year Project, was developed using React JS and APIs to provide data on gym workouts and meal recipes.",
             icon: <FontAwesomeIcon icon={faLaptopCode} className="project-icon" />,
             githubLink: 'https://github.com/GonXGon/FinalYearProject.git',
+        },
+        {
+            title: "E-commerce Website",
+            description: "This is a full-stack E-commerce web application built with React for the frontend and Node.js/Express for the backend, using MongoDB for the database",
+            icon: <FontAwesomeIcon icon={faShoppingCart} className="project-icon" />,
+            githubLink: 'https://github.com/GonXGon/E-commerce-Website.git',
+            projectLink: 'https://e-commerce-website-ten-rho.vercel.app/',
         },
         {
             title: "Spotify Web Application",
@@ -106,6 +113,11 @@ const Projects = () => {
                                             <Button href={project.githubLink} variant="dark">
                                                 Git Hub Link
                                             </Button>
+                                            {project.projectLink && (
+                                                <Button href={project.projectLink} variant="dark">
+                                                    Project Link
+                                                </Button>
+                                            )}
                                         </div>
                                     </Card>
                                 </motion.div>
