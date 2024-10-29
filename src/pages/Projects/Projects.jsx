@@ -31,6 +31,7 @@ const Projects = () => {
             description: "A web application that provides weather forecasts using external APIs.",
             icon: <FontAwesomeIcon icon={faCloud} className="project-icon" />,
             githubLink: 'https://github.com/GonXGon/Weather_APP.git',
+            projectLink: 'https://shubhamweathe-app.netlify.app/',
         },
         {
             title: "Android App",
